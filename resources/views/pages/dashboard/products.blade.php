@@ -21,12 +21,11 @@
                 <div class="border border-primary bg-base-100 my-3 rounded-md p-2">
                     <div class="flex ">
                         <figure class="mr-2">
-                            {{-- {{dd($data)}} --}}
-                            @if ($data['url_image'] === null)
+                            {{-- {{dd($data['url_image'])}} --}}
+                            @if ($data['url_img'] === null)
                                 <img class ="h-16 object-cover w-full" src="https://ik.imagekit.io/rizkysr90/vecteezy_icon-image-not-found-vector__2xfvvap08.jpg" alt="gambar produk" />
                             @else
-                                <img class ="h-32 object-cover w-full" src={{$data['url_image']}}  alt="gambar produk" />
-                              
+                                <img class ="h-16 object-cover w-full" src={{$data['url_img']}}  alt="gambar produk" />
                             @endif
                         </figure>
                         <div class="flex flex-col">

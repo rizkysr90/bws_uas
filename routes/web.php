@@ -11,12 +11,15 @@ use App\Http\Controllers\ProductsController;
 Route::get('/', function () {
     return view('landingpage');
 });
+
+Route::get('/{username}', [UsersController::class, 'viewShop']);
 Route::post('/auth/register', [UsersController::class, 'saveNewUser']);
 Route::post('/auth/login', [UsersController::class, 'login']);
+Route::get('/auth/logout', [UsersController::class, 'logout']);
 
 Route::get('/users/register', function () {
     return view('pages.register');
-});
+})->middleware('guest');
 
 Route::get('/users/login', function () {
     return view('pages.login');
@@ -28,6 +31,7 @@ Route::get('/users/dashboard', function () {
 
 Route::get('/users/categories',[CategoriesController::class, 'view'])->middleware('auth');
 Route::get('/users/products',[ProductsController::class, 'view'])->middleware('auth');
+Route::get('/users/viewCustomize',[UsersController::class, 'viewCustomize'])->middleware('auth');
 
 Route::get('/categories/viewAdd', function() {
     return view('pages.dashboard.addcategory');
@@ -36,7 +40,7 @@ Route::get('/products/viewAdd', [ProductsController::class, 'addView'])->middlew
 Route::get('/products/viewUpdate/{id}', [ProductsController::class, 'updateView'])->middleware('auth');
 Route::get('/categories/update/{id}', [CategoriesController::class, 'updateView'])->middleware('auth');
 
-
+Route::post('/api/users/customize/{id}',[UsersController::class, 'update'])->middleware('auth');
 Route::post('/api/categories', [CategoriesController::class, 'create'])->middleware('auth');
 Route::get('/api/categories/delete/{id}', [CategoriesController::class, 'delete'])->middleware('auth');
 Route::post('/api/categories/update/{id}', [CategoriesController::class, 'update'])->middleware('auth');

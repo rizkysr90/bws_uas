@@ -25,6 +25,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username',
+        'url_cover_img',
+        'url_profile_img',
+        'whatsapp',
+        'bio',
+        'nama_toko'
     ];
     public function products()
     {

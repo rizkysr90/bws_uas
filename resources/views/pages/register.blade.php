@@ -8,7 +8,7 @@
                 <h1 class="text-5xl font-bold">Register now</h1>
                 <p class="py-6">Daftarkan Dirimu Sekarang!</p>
               </div>
-              <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+              <div class="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
                 <form class="card-body" method="POST" action="/auth/register">
                   @csrf
                     @if ($errors->any())
@@ -25,6 +25,12 @@
                       <span class="label-text" >Name*</span>
                     </label>
                     <input type="text" placeholder="Input your fullname" id="name" name="name" class="input input-bordered" />
+                  </div>
+                  <div class="form-control">
+                    <label class="label" for="username">
+                      <span class="label-text" >Username</span>
+                    </label>
+                    <input type="text" placeholder="Input your username" id="username" name="username" class="input input-bordered" />
                   </div>
                   <div class="form-control">
                     <label class="label" for="email">

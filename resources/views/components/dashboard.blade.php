@@ -9,13 +9,14 @@
             <button class="">
                 See Catalog
             </button>
-            <button class="">
+            <a href="/users/viewCustomize" class="">
                 Customize Shop
-            </button>
+            </a>
         </div>
         {{-- Navbar --}}
-        <div class="navbar bg-primary text-base-100">
-            <a class="btn btn-ghost normal-case text-xl">EzCatalog</a>
+        <div class="navbar bg-primary text-base-100 flex justify-between">
+            <a class="btn btn-ghost normal-case text-xl">EZCatalog</a>
+            <a class="btn btn-ghost border-base-100 text-white btn-outline" href ="/auth/logout">Keluar</a>
         </div>
         @yield('content')
 
