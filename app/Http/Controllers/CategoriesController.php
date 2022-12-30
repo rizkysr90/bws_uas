@@ -29,7 +29,8 @@ class CategoriesController extends Controller
 
     }
     public function view() {
-        $dataCategories = Category::orderBy('name');
+        $user = Auth::user();
+        $dataCategories = Category::orderBy('name')->where('user_id', $user->id);
         // dd($yourdata) untuk debugging
         return view('pages.dashboard.categories',
             [

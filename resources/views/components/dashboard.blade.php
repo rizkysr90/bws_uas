@@ -1,8 +1,8 @@
 @extends('components.main')
 
 @section('base')
-    <div class="bg-base-100 relative min-h-screen">
-        <div class="btm-nav bg-base-100  text-primary absolute ">
+    <div class="bg-base-100 relative min-h-screen pb-24">
+        <div class="btm-nav bg-base-100  text-primary absolute bottom-0 ">
             <a href="/users/dashboard" class="text-base-100 bg-primary active">
                 Home
             </a>

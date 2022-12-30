@@ -14,7 +14,7 @@
         <h2 class="card-title">Atur Produk</h2>
         <p>Disini kamu bisa mengatur produk yang kamu ingin tampilkan</p>
         <div class="card-actions justify-end">
-            <button class="btn btn-primary">Atur Sekarang</button>
+            <a href="/users/products" class="btn btn-primary">Atur Sekarang</a>
         </div>
         </div>
     </div>
