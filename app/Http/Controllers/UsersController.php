@@ -33,6 +33,9 @@ class UsersController extends Controller
         ];
         // echo $data;
         $insertingData = User::create($data);
+        if ($insertingData) {
+            Alert::success('Berhasil', 'User berhasil dibuat');
+        }
         return redirect('/users/login');
     }
 
