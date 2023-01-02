@@ -9,7 +9,7 @@
         @yield('content')
         <footer class="footer absolute bottom-0 footer-center p-4 bg-primary text-base-100">
             <div>
-              <p>Made with ♥ By EZCatalog - BWS UAS 2022</p>
+              <p>Made with ♥ By EZCatalog - BWS UAS 2023</p>
             </div>
           </footer>
     </div>

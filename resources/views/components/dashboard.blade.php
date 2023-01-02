@@ -6,9 +6,9 @@
             <a href="/users/dashboard" class="text-base-100 bg-primary active">
                 Home
             </a>
-            <button class="">
+            <a class="" href="/{{auth()->user()->username}}" target="_blank">
                 See Catalog
-            </button>
+            </a>
             <a href="/users/viewCustomize" class="">
                 Customize Shop
             </a>

@@ -12,9 +12,14 @@
         <p>Hello World!</p>
         <div class="">Tugas UAS Business Web Solution</div>
         <div class="font-bold">"EZCatalog"</div>
+        <div class="font-bold text-center italic mt-4">"Cara sederhana untuk membuat katalog produk anda"</div>
         <div class="mt-4">
-          <a href="/users/register" class="btn btn-primary mx-2">Daftar</a>
-          <a href="/users/login" class="btn btn-secondary mx-2">Login</a>
+          @if (auth()->user()?->id  !== null)
+            <a href="/users/dashboard" class="btn btn-primary mx-2">Go to Dashboard</a>
+          @elseif (auth()->user()?->id === null)
+            <a href="/users/register" class="btn btn-primary mx-2">Daftar</a>
+            <a href="/users/login" class="btn btn-secondary mx-2">Login</a>
+          @endif
         </div>
       </div>
 
